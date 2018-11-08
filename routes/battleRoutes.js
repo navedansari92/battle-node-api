@@ -85,6 +85,7 @@ router.get("/stats",(req,res)=>{
 	stats.defender_size.average=defender_mean;
 	stats.defender_size.max=defender_max.defender_size;
 	stats.defender_size.min=defender_min.defender_size;
+	res.setHeader("Content-Type","application/json")
 	res.json({stats:stats})
 })
 
@@ -113,7 +114,8 @@ router.get("/search",(req,res)=>{
 	}
 
 	cquery.exec().then(data=>{
-		console.log("----------------------------"+data.length)
+		//console.log("----------------------------"+data.length)
+		res.setHeader("Content-Type","application/json")
 		res.json(data)
 	}).catch(err=>{
 		console.log(err)
