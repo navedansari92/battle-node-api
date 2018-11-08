@@ -6,8 +6,8 @@ const battleSchema=require("./../model/battleModel");
 const dbUrl="mongodb://@ds151137.mlab.com:51137/battleapi";
 mongoose.connect(dbUrl,{
 	auth: {
-	   user:'myusername',
-	   password:'mypassword'
+	   user:'battleapi',
+	   password:'battle@123'
 	},
 	useNewUrlParser: true
 }).then(()=>{
@@ -96,6 +96,7 @@ router.get("/search",(req,res)=>{
 	for(let k in req.query){
 		req.query[k]!==""? criteria[k] = req.query[k] : null
 	}
+
 	cquery=battleSchema.find()
 	if(criteria.hasOwnProperty("king")){
 		criteria.attacker_king=criteria.king
@@ -114,7 +115,7 @@ router.get("/search",(req,res)=>{
 	}
 
 	cquery.exec().then(data=>{
-		//console.log("----------------------------"+data.length)
+	//	console.log("----------------------------"+data.length)
 		res.setHeader("Content-Type","application/json")
 		res.json(data)
 	}).catch(err=>{
