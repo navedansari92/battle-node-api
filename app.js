@@ -2,7 +2,7 @@ const express=require("express");
 const app=express();
 const router=express.Router();
 const bodyParser=require("body-parser");
-const port="3000";
+const port = process.env.port || 3000;
 const battleRoutes=require("./routes/battleRoutes");
 
 //app.use(router);
