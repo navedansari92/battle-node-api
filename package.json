@@ -1,0 +1,21 @@
+{
+  "name": "battleapi",
+  "version": "1.0.0",
+  "description": "Battle api to fetch battles data",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Battleapi"
+  ],
+  "author": "N@ved",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.9",
+    "npm": "^6.4.1"
+  }
+}
