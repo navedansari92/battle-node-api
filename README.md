@@ -8,6 +8,7 @@ $ npm install (to install the package availalbe in package json)
 node app.js (for run api)
 
 for better output use postman to call endpoints
+base url = localhost:3000/battles/all
 
 /list (return all the places where battles was taken place)
 /all (return all data)
