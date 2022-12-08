@@ -13,8 +13,8 @@
   "author": "N@ved",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "lodash": "^4.17.11",
     "mongoose": "^5.3.9",
     "npm": "^6.4.1"
